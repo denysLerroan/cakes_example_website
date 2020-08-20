@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
+body {
+    margin: 0;
+    height: 100vh;
+    background: #070707;
+    font-family: 'Nobile';
+}
+
+*,
+*:before,
+*:before {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 2em;
+    height: 100vh;
+    &:first-child {
+        display: grid;
+        grid-template-rows: 10% 30% auto;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 2em;
+        font-weight: normal;
+        font-size: 3em;
+        line-height: .9em;
+    }
+    p {
+        line-height: 1.5em;
+        color: rgb(0, 0, 0);
+    }
+    //Criando a arrow
+    .line {
+        align-self: end; //???
+        width: 50%;
+        border-right: 1px solid white;
+        height: 50%;
+        margin-bottom: 4em;
+        position: relative;
+        &::after {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 11px 11px 0 11px;
+            border-color: antiquewhite transparent;
+            right: -.7em;
+            bottom: -2px;
+        }
+    }
+    .action {
+        color: rgb(255, 103, 103);
+        font-weight: 900;
+        font-size: 6em;
+        margin-top: 10px;
+        font-family: 'Tangerine', cursive;
+    }
+    .box-intro {
+        align-self: end; //???
+        border: 0px double white;
+        box-shadow: 0px -10px 40px 40px rgb(226, 226, 226);
+        height: auto;
+        margin-bottom: 0em;
+        position: relative;
+        text-align: center;
+        padding: 10px 10px;
+        border-radius: 10px;
+        color: rgb(99, 84, 116);
+        background-color: rgba(235, 235, 235, 0.938);
+    }
+    .text {
+        font-size: 1.1em;
+        text-align: justify;
+        color: rgb(99, 84, 116);
+    }
+    .button {
+        margin-bottom: 6px;
+        text-align: center;
+    }
+    .action-button {
+        color: white;
+        background-color: rgba(255, 0, 0, 0.979);
+        padding: 8px;
+        border-radius: 10px;
+    }
+}
+
+//Configurando a Navbar
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em
+}
+
+.menu {
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em
+}
+
+.action {
+    color: blanchedalmond;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 3em;
+    margin: 0;
+    font-weight: normal;
+}
+
+.sub-text {
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+//Manipula o container inteiro
+.secondary {
+    margin-top: -3em;
+}
+
+.mountains,
+.trees {
+    position: absolute;
+    z-index: -1;
+    width: 100%; //Ajustou o tamanho das imagens e ficou responsivo
+}
+
+.mountains {
+    top: 0;
+    opacity: 0.6;
+}
+
+.trees {
+    top: 44%;
+    opacity: 0.5;
+}
+
+.box-intro {
+    color: blanchedalmond;
+}
+
+//Melhorar este ponto (ajuste do tamanho das imagens para telas especificas), talves o grid seja uma boa opção.
+@media only screen and (min-width: 665px) {
+    .mountains {
+        top: -25%;
+    }
+    .trees {
+        top: -5%;
+    }
+}
+
+@media only screen and (min-width: 930px) {
+    .mountains {
+        top: -60%;
+    }
+    .trees {
+        top: -30%;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    .mountains {
+        top: -60%;
+    }
+    .trees {
+        top: -40%;
+    }
+}

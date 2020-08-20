@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dan Cakes</title>
+    <title>Cakes Website Example</title>
+
+    <!--Bootstrap Grid-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -16,14 +19,65 @@
     <!--Fontawesome-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!--Greenshock-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
-
-
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Marck+Script&family=Playball&family=Tangerine:wght@700&display=swap');
+    </style>
 </head>
 
 <body>
+    <div class="container">
+        <header>
+            <a href="" class="logo"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Cakes Logo</a>
 
+            <nav>
+                <a href="" class="menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            </nav>
+        </header>
+
+        <h1 class="action lax" data-lax-translate-y="0 0, 600 -200">Cakes Example</h1>
+
+
+        <div class="box-intro lax" data-lax-translate-y="0 0, 600 -800" data-lax-opacity="0 1, 100 0">
+            <h4>Cakes Example</h4>
+            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet modi, aliquam fugiat odit autem corporis ab quas velit voluptas, esse expedita natus mollitia totam quia.</p>
+            <div class="button">
+                <a href="" class="action-button">Conheça!</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="container secondary lax" data-lax-translate-y="0 0 ,400 -400" data-lax-opacity="0 0, 250 1">
+        <h2>Our Products</h2>
+        <p class="sub-text">Cakes</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatibus cupiditate illum beatae ut dolore quae pariatur rem ea voluptatum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatibus cupiditate illum beatae ut dolore quae pariatur rem ea voluptatum.</p>
+    </div>
+
+    <img src="images/black-forest-cake-thumb.jpg" alt="Mountains" class="mountains lax" data-lax-translate-y="0 1, 400 -100">
+
+    <footer>
+        <p>Lerroan 2020</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+
+    <script>
+        window.onload = function() {
+            lax.setup() // init
+
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+
+            window.requestAnimationFrame(updateLax)
+        }
+    </script>
 </body>
 
 </html>

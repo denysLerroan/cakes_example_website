@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap");
+body {
+  margin: 0;
+  height: 100vh;
+  background: #070707;
+  font-family: 'Nobile';
+}
+
+*,
+*:before,
+*:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  padding: 2em;
+  height: 100vh;
+}
+
+.container:first-child {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10% 30% auto;
+      grid-template-rows: 10% 30% auto;
+}
+
+.container h1 {
+  text-align: center;
+  margin-top: 2em;
+  font-weight: normal;
+  font-size: 3em;
+  line-height: .9em;
+}
+
+.container p {
+  line-height: 1.5em;
+  color: black;
+}
+
+.container .line {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  width: 50%;
+  border-right: 1px solid white;
+  height: 50%;
+  margin-bottom: 4em;
+  position: relative;
+}
+
+.container .line::after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 11px 0 11px;
+  border-color: antiquewhite transparent;
+  right: -.7em;
+  bottom: -2px;
+}
+
+.container .action {
+  color: #ff6767;
+  font-weight: 900;
+  font-size: 6em;
+  margin-top: 10px;
+  font-family: 'Tangerine', cursive;
+}
+
+.container .box-intro {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  border: 0px double white;
+  -webkit-box-shadow: 0px -10px 40px 40px #e2e2e2;
+          box-shadow: 0px -10px 40px 40px #e2e2e2;
+  height: auto;
+  margin-bottom: 0em;
+  position: relative;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: #635474;
+  background-color: rgba(235, 235, 235, 0.938);
+}
+
+.container .text {
+  font-size: 1.1em;
+  text-align: justify;
+  color: #635474;
+}
+
+.container .button {
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.container .action-button {
+  color: white;
+  background-color: rgba(255, 0, 0, 0.979);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo {
+  color: #fffefe;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.menu {
+  color: #fffefe;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.action {
+  color: blanchedalmond;
+}
+
+h2 {
+  color: black;
+  font-size: 3em;
+  margin: 0;
+  font-weight: normal;
+}
+
+.sub-text {
+  margin-top: 0;
+  font-size: 1.4em;
+}
+
+.secondary {
+  margin-top: -3em;
+}
+
+.mountains,
+.trees {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.mountains {
+  top: 0;
+  opacity: 0.6;
+}
+
+.trees {
+  top: 44%;
+  opacity: 0.5;
+}
+
+.box-intro {
+  color: blanchedalmond;
+}
+
+@media only screen and (min-width: 665px) {
+  .mountains {
+    top: -25%;
+  }
+  .trees {
+    top: -5%;
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .mountains {
+    top: -60%;
+  }
+  .trees {
+    top: -30%;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .mountains {
+    top: -60%;
+  }
+  .trees {
+    top: -40%;
+  }
+}
+/*# sourceMappingURL=base.css.map */
